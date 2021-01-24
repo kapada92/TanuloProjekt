@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class AI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject enemy;
+    public GameObject player;
+    public float enemy_speed;
+    public Vector2 v;
+    public Animator anim;
+
+
+    private void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            
+
+
+            Debug.Log("A player belépett az enemy területére!");
+        }
     }
 }
